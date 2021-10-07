@@ -40,10 +40,12 @@ const TableDay = (props) => {
                 setLoading(false);
                 setEmpty(false);
                 console.log(`INFO, ${seller.username}, ordini.table.component, getData user ordini`)
+                Logging.log("INFO", seller.username, "ordini.table.component", `getData day user order`)
                 } else {
                     setEmpty(true);
                     setMsg(`${seller.username}, non ci sono ordini per la data selezionata`);
                     console.log(`INFO, ${seller.username}, ordini.table.component, getData not today order yet`)
+                    Logging.log("INFO", seller.username, "ordini.table.component", `getData day user order is empty`)
                 }
             
         } catch (e) {

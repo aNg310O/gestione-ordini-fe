@@ -30,10 +30,12 @@ const Table = () => {
                 setOrdini(response.data)
                 setLoading(false);
                 console.log(`INFO, ${seller.username}, ordini.table.component, getData all ordini`)
+                Logging.log("INFO", seller.username, "ordini.table.component", `getData all ordini`)
                 } else {
                     setEmpty(true);
                     setMsg(`${seller.username}, ancora non ci sono ordini per oggi`);
-                    console.log(`INFO, ${seller.username}, ordini.table.component, getData not today order yet`)
+                    console.log(`INFO, ${seller.username}, ordini.table.component, getData today order empty`)
+                    Logging.log("INFO", seller.username, "ordini.table.component", `getData all ordini empty`)
                 }
             } else {
                 const response = await API.get(`/gestione-ordini/ordini/${seller.username}`, { headers: authHeader() })
@@ -41,10 +43,12 @@ const Table = () => {
                 setOrdini(response.data)
                 setLoading(false);
                 console.log(`INFO, ${seller.username}, ordini.table.component, getData user ordini`)
+                Logging.log("INFO", seller.username, "ordini.table.component", `getData user ordini`)
                 } else {
                     setEmpty(true);
                     setMsg(`${seller.username}, ancora non ci sono ordini per oggi`);
                     console.log(`INFO, ${seller.username}, ordini.table.component, getData not today order yet`)
+                    Logging.log("INFO", seller.username, "ordini.table.component", `getData all ordini empty`)
                 }
             }
         } catch (e) {
@@ -78,13 +82,14 @@ const Table = () => {
     }
 }
 
-    const removeData = (id) => {
+    const removeData = (id, desc, pesoProdotto, grammatura, qty) => {
         var answer = window.confirm(`Vuoi davvero eliminare questo ordine?`);
         if (answer) {
             API.delete(`gestione-ordini/ordine/${id}`, { headers: authHeader() }).then(res => {
                 const del = ordini.filter(ordine => id !== ordine.id)
                 setOrdini(del)
                 console.log(`INFO , ${seller.username}, ordini.table.component, deleted order ${id}`)
+                Logging.log("INFO", seller.username, "ordini.table.component", `cancellato ordine ${id, desc, pesoProdotto, grammatura, qty }`)
             })
         }
     }
@@ -108,7 +113,7 @@ const Table = () => {
                     <td>{note}</td>
                     <td>{seller}</td>
                     <td className='operation'>
-                        <button className='button' onClick={() => removeData(id)}>Elimina</button>
+                        <button className='button' onClick={() => removeData(id, desc, pesoProdotto, grammatura, qty)}>Elimina</button>
                     </td>
                 </tr>
             )

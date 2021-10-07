@@ -54,14 +54,16 @@ const AdminOrderTable = () => {
         try {
             const res = await API.get(`/gestione-ordine/allOrder/${str}`, { headers: authHeader() })
             if (res.data.length !== 0) {
-                          setOrdine(res.data)
+                setOrdine(res.data)
                 setLoading(false)
                 setEmpty(false);
-                          console.log(`INFO, ${seller.username}, admin.ordini.table.component, getData allOrder`)
+                console.log(`INFO, ${seller.username}, admin.ordini.table.component, getData allOrder`)
+                Logging.log("INFO", seller.username, "admin.ordini.table.component", `Get di tutti gli ordini del giorno ${str}`)
             } else {
                 setEmpty(true);
                 setMsg(`${seller.username}, non ci sono ordini per la data selezionata`);
                 console.log(`INFO, ${seller.username}, admin.ordini.table.component, getData not today order yet`)
+                Logging.log("INFO", seller.username, "admin.ordini.table.component", `Get di tutti gli ordini del giorno ${str}, risultato vuoto`)
                     }
         } 
         catch (e) {
@@ -75,25 +77,25 @@ const AdminOrderTable = () => {
                 setSnackColor('red');
                 setResult("Sessione scaduta. Fai logout/login!")
                 setOpen(true);
-                      Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
+                Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
                 console.log(`ERROR , ${seller.username}, admin.ordini.table.component, getData errore ${e.message}`)
-                    } else if (e.response.status === 403) {
+            } else if (e.response.status === 403) {
                 setLoading(false);
-                      setSnackColor('red');
-                      setResult("No token provided. Fai logout/login!")
-                      setOpen(true);
-                      Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
+                setSnackColor('red');
+                setResult("No token provided. Fai logout/login!")
+                setOpen(true);
+                Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
                 console.log(`ERROR , ${seller.username}, admin.ordini.table.component, getData errore ${e.message}`)
-                    } else {
+            } else {
                 setLoading(false);
-                      setSnackColor('red');
-                      setResult(e.message)
-                      setOpen(true);
-                      Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
+                setSnackColor('red');
+                setResult(e.message)
+                setOpen(true);
+                Logging.log("ERROR", seller.username, "admin.ordini.table.component", `getData errore ${e.message}`)
                 console.log(`ERROR , ${seller.username}, admin.ordini.table.component, getData errore ${e.message}`)
-                    }
+            }
         }
-              }
+    }
 
 
     const handleReportClick = () => {

@@ -118,10 +118,22 @@ export default class Register extends Component {
               console.log(
                 `INFO, ${this.state.username}, login.component, user logged in`
               );
+              Logging.log(
+                "INFO",
+                this.state.username,
+                "login.component",
+                `user logged in`
+              );
             }
           );
           console.log(
             `INFO, "NO USER", register.component, register registrato nuovo utente ${this.state.username}`
+          );
+          Logging.log(
+            "INFO",
+            this.state.username,
+            "login.component",
+            `utente registrato ${this.state.username}`
           );
         },
         (error) => {

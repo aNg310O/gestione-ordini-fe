@@ -48,6 +48,7 @@ const AdminReportTable = () => {
                     setOrdine(res.data)
                     setLoading(false);
                     console.log(`INFO, ${seller.username}, admin.report.component, getData todayOrder`)
+                    Logging.log("INFO", seller.username, "admin.report.component", `get today order report`)
                 }
             }
         }

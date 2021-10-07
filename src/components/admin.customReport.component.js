@@ -68,10 +68,12 @@ const AdminReportDay = () => {
                           setLoading(false)
                           setEmpty(false);
                           console.log(`INFO, ${seller.username}, admin.customReport.component, getData dateOrder`)
+                          Logging.log("INFO", seller.username, "admin.customReport.component", `Eseguito report per la data ${str}`)
                     } else {
                     setEmpty(true);
                     setMsg(`${seller.username}, non ci sono ordini per la data selezionata`);
-                    console.log(`INFO, ${seller.username}, admin.ordini.table.component, getData not today order yet`)
+                    console.log(`INFO, ${seller.username}, admin.customReport.component, getData not today order yet`)
+                    Logging.log("INFO", seller.username, "admin.customReport.component", `Eseguito report per la data ${str}, nessun risultato trovato`)
                     }
             }
         catch(e) {

@@ -67,6 +67,12 @@ export function AdminProdotti() {
             console.log(
               `INFO, ${currentUser.username}, admin.gestioneprodotti.component, handleProductClick inserito prodotto`
             );
+            Logging.log(
+              "INFO",
+              currentUser.username,
+              "admin.gestioneprodotti.component",
+              `Inserimento nuovo prodotto ${desc, pesoTotale, grammatura}`
+            );
           }
         })
         .catch((e) => {
@@ -112,6 +118,12 @@ export function AdminProdotti() {
           }
         });
     } else {
+      Logging.log(
+        "INFO",
+        currentUser.username,
+        "admin.gestioneprodotti.component",
+        `Tentativo inserimento prodotto vuoto`
+      );
       setDisabled(true);
       setResult("Il prodotto non può essere vuoto...");
       setSnackColor("orange");

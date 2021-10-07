@@ -34,6 +34,12 @@ const AdminUsersTable = () => {
           console.log(
             `INFO, ${seller.username}, admin.users.component, getData all users`
           );
+          Logging.log(
+            "INFO",
+            seller.username,
+            "admin.users.component",
+            `get all users`
+          );
         }
       }
     } catch (e) {
@@ -105,6 +111,12 @@ const AdminUsersTable = () => {
           setUsers(del);
           console.log(
             `INFO, ${seller.username}, admin.users.component, removeData user ${username}`
+          );
+          Logging.log(
+            "INFO",
+            seller.username,
+            "admin.users.component",
+            `Eliminazione user ${username}`
           );
         });
       }

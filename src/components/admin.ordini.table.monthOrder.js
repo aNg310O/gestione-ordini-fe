@@ -81,6 +81,12 @@ const AdminMonthOrder = () => {
         console.log(
           `INFO, ${seller.username}, ordini.table.monthOrder.component, retrieveMonth() Call OK`
         );
+        Logging.log(
+          "INFO",
+          seller.username,
+          "ordini.table.monthOrder.component",
+          "retrieveMonth() Call OK"
+        );
       }
     } catch (e) {
       if (e.message === "Network Error") {
@@ -154,13 +160,25 @@ const AdminMonthOrder = () => {
         console.log(
           `INFO, ${seller.username}, ordini.table.monthOrder.component, getData monthyearReport`
         );
+        Logging.log(
+          "INFO",
+          seller.username,
+          "ordini.table.monthOrder.component",
+          "getData monthyearReport"
+        );
       } else {
         //setEmpty(true);
         setMsg(
           `${seller.username}, non ci sono ordini per la data selezionata`
         );
         console.log(
-          `INFO, ${seller.username}, ordini.table.monthOrder.component, getData month order yet`
+          `INFO, ${seller.username}, ordini.table.monthOrder.component, getData month order empty`
+        );
+        Logging.log(
+          "INFO",
+          seller.username,
+          "ordini.table.monthOrder.component",
+          "getData monthyearReport empty"
         );
       }
     } catch (e) {

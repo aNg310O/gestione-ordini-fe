@@ -75,6 +75,12 @@ export function SellerComponent() {
         console.log(
           `INFO, ${currentUser.username}, ordini.component, retrieveProduct() Call OK`
         );
+        Logging.log(
+          "INFO",
+          currentUser.username,
+          "ordini.component",
+          "retrieveProduct() Call OK"
+        );
       }
     } catch (e) {
       if (e.message === "Network Error") {
@@ -137,7 +143,13 @@ export function SellerComponent() {
         setPesos(response.data);
         setLoadingPeso(false);
         console.log(
-          `INFO, ${currentUser.username}, ordini.component, retrieveProduct() Call OK`
+          `INFO, ${currentUser.username}, ordini.component, retrievePeso() Call OK`
+        );
+        Logging.log(
+          "INFO",
+          currentUser.username,
+          "ordini.component",
+          "retrievePeso() Call OK"
         );
       }
     } catch (e) {
@@ -158,7 +170,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
         );
       } else if (e.response.status === 403) {
         setLoadingPeso(false);
@@ -172,7 +184,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
         );
       } else {
         setLoadingPeso(false);
@@ -186,7 +198,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
         );
       }
     }
@@ -207,7 +219,13 @@ export function SellerComponent() {
         setPezzaturas(response.data);
         setLoadingPezzatura(false);
         console.log(
-          `INFO, ${currentUser.username}, ordini.component, retrieveProduct() Call OK`
+          `INFO, ${currentUser.username}, ordini.component, retrievePezzatura() Call OK`
+        );
+        Logging.log(
+          "INFO",
+          currentUser.username,
+          "ordini.component",
+          "retrievePezzatura() Call OK"
         );
       }
     } catch (e) {
@@ -228,7 +246,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
         );
       } else if (e.response.status === 403) {
         setLoadingPezzatura(false);
@@ -242,7 +260,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
         );
       } else {
         setLoadingPezzatura(false);
@@ -256,7 +274,7 @@ export function SellerComponent() {
           `retrieveProduct() Call KO ${e.message}`
         );
         console.log(
-          `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
+          `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
         );
       }
     }
@@ -266,8 +284,14 @@ export function SellerComponent() {
       `INFO, ${
         currentUser.username
       }, ordini.component, handleChange() scelto prodotto ${
-        event.target.value === 2 ? "Custom" : event.target.value.desc
+        event.target.value === 2 ? "Custom" : event.target.value
       }`
+    );
+    Logging.log(
+      "INFO",
+      currentUser.username,
+      "ordini.component",
+      `scelto prodotto ${event.target.value === 2 ? "Custom" : event.target.value}`
     );
     if (event.target.value !== 2 && event.target.value !== "Ricotta") {
       setLoadingPeso(true);
@@ -319,9 +343,15 @@ export function SellerComponent() {
     console.log(
       `INFO, ${
         currentUser.username
-      }, ordini.component, handleChange() scelto prodotto ${
-        event.target.value === 2 ? "Custom" : event.target.value.desc
+      }, ordini.component, handleChangePeso() scelto peso busta ${
+        event.target.value === 2 ? "Custom" : event.target.value
       }`
+    );
+    Logging.log(
+      "INFO",
+      currentUser.username,
+      "ordini.component",
+      `scelto peso busta ${event.target.value === 2 ? "Custom" : event.target.value}`
     );
     setLoadingPezzatura(true);
     setPeso(event.target.value || "");
@@ -341,9 +371,15 @@ export function SellerComponent() {
     console.log(
       `INFO, ${
         currentUser.username
-      }, ordini.component, handleChange() scelto prodotto ${
-        event.target.value === 2 ? "Custom" : event.target.value.desc
+      }, ordini.component, handleChangePezzatura() scelta pezzatura ${
+        event.target.value === 2 ? "Custom" : event.target.value
       }`
+    );
+    Logging.log(
+      "INFO",
+      currentUser.username,
+      "ordini.component",
+      `scelta pezzatura ${event.target.value === 2 ? "Custom" : event.target.value}`
     );
     setPezzatura(event.target.value || "");
     setBoxVisiblity("block");
@@ -375,6 +411,12 @@ export function SellerComponent() {
             setOpen(true);
             console.log(
               `INFO, ${currentUser.username}, ordini.component, handleClick inserito prodotto`
+            );
+            Logging.log(
+              "INFO",
+              currentUser.username,
+              "ordini.component",
+              `inserito ordine ${prodotto}, peso totale: ${pesoTotale}, pezzatura: ${pezzatura}`
             );
           }
         })
@@ -457,6 +499,12 @@ export function SellerComponent() {
             setOpen(true);
             console.log(
               `INFO, ${currentUser.username}, ordini.component, handleCustomClick inserito prodotto`
+            );
+            Logging.log(
+              "INFO",
+              currentUser.username,
+              "ordini.component",
+              `inserito ordine personalizzato ${prodottoCustom}`
             );
           }
         })

@@ -58,6 +58,12 @@ export default class Login extends Component {
         () => {
           this.props.history.push("/");
           window.location.reload();
+          Logging.log(
+            "INFO",
+            this.state.username,
+            "login.component",
+            `Eseguito login`
+          );
           console.log(
             `INFO, ${this.state.username}, login.component, user logged in`
           );

@@ -33,6 +33,12 @@ const ProductTable = (props) => {
           console.log(
             `INFO, ${seller.username}, admin.product.component, getData get dei prodotti`
           );
+          Logging.log(
+            "INFO",
+            seller.username,
+            "admin.product.component",
+            "get di tutti i prodotti"
+          );
         }
       }
     } catch (e) {
@@ -87,7 +93,7 @@ const ProductTable = (props) => {
     }
   };
 
-  const removeData = (id) => {
+  const removeData = (id, prod, pesoTotale, pezzatura) => {
     var answer = window.confirm(`Vuoi davvero eliminare il prodotto?`);
     if (answer) {
       API.delete(`gestione-ordini/prodottosplit/${id}`, {
@@ -97,6 +103,12 @@ const ProductTable = (props) => {
         setProdotto(del);
         console.log(
           `INFO, ${seller.username}, admin.product.component, removeData prodotto ${id}`
+        );
+        Logging.log(
+          "INFO",
+          seller.username,
+          "admin.product.component",
+          `removeData prodotto ${id, prod, pesoTotale, pezzatura}`
         );
       });
     }
@@ -119,7 +131,7 @@ const ProductTable = (props) => {
             <td>{pesoTotale}</td>
             <td>{pezzatura}</td>
             <td className="operation">
-              <button className="button" onClick={() => removeData(id)}>
+              <button className="button" onClick={() => removeData(id, prodotto, pesoTotale, pezzatura)}>
                 Elimina
               </button>
             </td>
