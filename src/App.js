@@ -13,6 +13,7 @@ import { AdminUsers } from "./components/admin.gestioneutenti.component";
 import Register from "./components/register.component";
 import { AdminReportOggi } from "./components/admin.reportoggi.component";
 import { AdminReportAltri } from "./components/admin.altrireport.component";
+import { AdminEvent } from "./components/admin.eventlog";
 import NotFoundPage from "./components/NotFoundPage";
 
 class App extends Component {
@@ -228,6 +229,19 @@ class App extends Component {
                   </Link>
                 </li>
               )}
+
+              {showAdminBoard && (
+                <li className="nav-item">
+                  <Link
+                    to={"/admin/event"}
+                    className="nav-link"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse.show" /* onClick={() => this.setState({ title: " | Altri report" })} */
+                  >
+                    Event log
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </nav>
@@ -245,6 +259,7 @@ class App extends Component {
             <Route path="/admin/new" component={Register} />
             <Route path="/admin/report/oggi" component={AdminReportOggi} />
             <Route path="/admin/report/altri" component={AdminReportAltri} />
+            <Route path="/admin/event" component={AdminEvent} />
             <Route path="/404" component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>
