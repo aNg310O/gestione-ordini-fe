@@ -291,7 +291,9 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelto prodotto ${event.target.value === 2 ? "Custom" : event.target.value}`
+      `scelto prodotto ${
+        event.target.value === 2 ? "Custom" : event.target.value
+      }`
     );
     if (event.target.value !== 2 && event.target.value !== "Ricotta") {
       setLoadingPeso(true);
@@ -351,7 +353,9 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelto peso busta ${event.target.value === 2 ? "Custom" : event.target.value}`
+      `scelto peso busta ${
+        event.target.value === 2 ? "Custom" : event.target.value
+      }`
     );
     setLoadingPezzatura(true);
     setPeso(event.target.value || "");
@@ -379,7 +383,9 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelta pezzatura ${event.target.value === 2 ? "Custom" : event.target.value}`
+      `scelta pezzatura ${
+        event.target.value === 2 ? "Custom" : event.target.value
+      }`
     );
     setPezzatura(event.target.value || "");
     setBoxVisiblity("block");
@@ -416,7 +422,7 @@ export function SellerComponent() {
               "INFO",
               currentUser.username,
               "ordini.component",
-              `inserito ordine ${prodotto}, peso totale: ${pesoTotale}, pezzatura: ${pezzatura}`
+              `inserito ordine ${prodotto}, quantita: ${qty} peso totale: ${pesoTotale}, pezzatura: ${pezzatura}`
             );
           }
         })
@@ -504,7 +510,7 @@ export function SellerComponent() {
               "INFO",
               currentUser.username,
               "ordini.component",
-              `inserito ordine personalizzato ${prodottoCustom}`
+              `inserito ordine personalizzato ${prodottoCustom}, pesoTotale: ${pesoTotaleCustom}`
             );
           }
         })
