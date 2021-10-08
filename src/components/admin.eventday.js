@@ -62,9 +62,7 @@ const AdminEventDay = () => {
         );
       } else {
         setEmpty(true);
-        setMsg(
-          `${seller.username}, non ci sono eventi per la data selezionata`
-        );
+        setMsg(`${seller.username}, non ci sono eventi.`);
         console.log(
           `INFO, ${seller.username}, admin.eventday, getData eventlog empty`
         );
