@@ -1,4 +1,5 @@
 import axios from "axios";
+import authHeader from "./auth-header";
 
 //const API_URL = "https://heroku-be-gestione-ordini.herokuapp.com/api/auth/";
 const API_LOG_URL = "https://manage-order.herokuapp.com/logging/"
@@ -10,7 +11,7 @@ class Logging {
         username,
         page,
         text
-      })
+      }, { headers: authHeader() })
   }
 }
 

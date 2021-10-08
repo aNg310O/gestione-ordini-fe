@@ -126,7 +126,7 @@ const AdminEventDay = () => {
     let value = event.target.value.toLowerCase();
     let result = [];
     result = allData.filter((data) => {
-      return data.timestamp.search(value) != -1;
+      return data.timestamp.search(value) !== -1;
     });
     setFilteredData(result);
   };
@@ -138,7 +138,7 @@ const AdminEventDay = () => {
     let value = event.target.value.toLowerCase();
     let result = [];
     result = allData.filter((data) => {
-      return data.username.search(value) != -1;
+      return data.username.search(value) !== -1;
     });
     setFilteredData(result);
   };

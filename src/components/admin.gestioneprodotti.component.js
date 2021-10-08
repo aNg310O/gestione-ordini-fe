@@ -71,7 +71,7 @@ export function AdminProdotti() {
               "INFO",
               currentUser.username,
               "admin.gestioneprodotti.component",
-              `Inserimento nuovo prodotto ${desc, pesoTotale, grammatura}`
+              `Inserimento nuovo prodotto ${(desc, pesoTotale, grammatura)}`
             );
           }
         })
