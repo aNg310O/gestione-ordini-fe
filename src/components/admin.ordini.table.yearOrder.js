@@ -85,7 +85,7 @@ const AdminYearOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.yearOrder.component",
-          "retrieveYear() OK"
+          "WEB - retrieveYear() OK"
         );
       }
     } catch (e) {
@@ -103,7 +103,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `retrieveYear() Call KO ${e.message}`
+          `WEB - retrieveYear() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.yearOrder.component, retrieveYear() Call KO ${e.message}`
@@ -117,7 +117,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `retrieveYear() Call KO ${e.message}`
+          `WEB - retrieveYear() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.yearOrder.component, retrieveYear() Call KO ${e.message}`
@@ -131,7 +131,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `retrieveYear() Call KO ${e.message}`
+          `WEB - retrieveYear() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.yearOrder.component, retrieveYear() Call KO ${e.message}`
@@ -164,7 +164,7 @@ const AdminYearOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.yearOrder.component",
-          "getData monthyearReport"
+          "WEB - getData monthyearReport"
         );
       } else {
         //setEmpty(true);
@@ -178,7 +178,7 @@ const AdminYearOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.yearOrder.component",
-          "getData monthyearReport empty"
+          "WEB - getData monthyearReport empty"
         );
       }
     } catch (e) {
@@ -196,7 +196,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.yearOrder.component, getData errore ${e.message}`
@@ -210,7 +210,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.yearOrder.component, getData errore ${e.message}`
@@ -224,7 +224,7 @@ const AdminYearOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.yearOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.yearOrder.component, getData errore ${e.message}`
@@ -257,7 +257,7 @@ const AdminYearOrder = () => {
         "INFO",
         seller.username,
         "ordini.table.yearOrder.component",
-        `handleReportClick download from browser`
+        `WEB - handleReportClick download from browser`
       );
     } else {
       Plugins.Filesystem.writeFile({
@@ -278,7 +278,7 @@ const AdminYearOrder = () => {
         "INFO",
         seller.username,
         "ordini.table.yearOrder.component",
-        `handleReportClick download from mobile`
+        `WEB - handleReportClick download from mobile`
       );
     }
   };

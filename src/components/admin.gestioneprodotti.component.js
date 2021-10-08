@@ -71,7 +71,9 @@ export function AdminProdotti() {
               "INFO",
               currentUser.username,
               "admin.gestioneprodotti.component",
-              `Inserimento nuovo prodotto ${(desc, pesoTotale, grammatura)}`
+              `WEB - Inserimento nuovo prodotto ${
+                (desc, pesoTotale, grammatura)
+              }`
             );
           }
         })
@@ -87,7 +89,7 @@ export function AdminProdotti() {
               "ERROR",
               currentUser.username,
               "admin.gestioneprodotti.component",
-              `handleProductClick errore ${e.message}`
+              `WEB - handleProductClick errore ${e.message}`
             );
           } else if (e.response.status === 403) {
             setSnackColor("red");
@@ -100,7 +102,7 @@ export function AdminProdotti() {
               "ERROR",
               currentUser.username,
               "admin.gestioneprodotti.component",
-              `handleProductClick errore ${e.message}`
+              `WEB - handleProductClick errore ${e.message}`
             );
           } else {
             setSnackColor("red");
@@ -113,7 +115,7 @@ export function AdminProdotti() {
               "ERROR",
               currentUser.username,
               "admin.gestioneprodotti.component",
-              `handleProductClick errore ${e.message}`
+              `WEB - handleProductClick errore ${e.message}`
             );
           }
         });
@@ -122,7 +124,7 @@ export function AdminProdotti() {
         "INFO",
         currentUser.username,
         "admin.gestioneprodotti.component",
-        `Tentativo inserimento prodotto vuoto`
+        `WEB - Tentativo inserimento prodotto vuoto`
       );
       setDisabled(true);
       setResult("Il prodotto non può essere vuoto...");

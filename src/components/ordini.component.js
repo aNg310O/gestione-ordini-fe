@@ -79,7 +79,7 @@ export function SellerComponent() {
           "INFO",
           currentUser.username,
           "ordini.component",
-          "retrieveProduct() Call OK"
+          "WEB - retrieveProduct() Call OK"
         );
       }
     } catch (e) {
@@ -97,7 +97,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
@@ -111,7 +111,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
@@ -125,7 +125,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrieveProduct() Call KO ${e.message}`
@@ -149,7 +149,7 @@ export function SellerComponent() {
           "INFO",
           currentUser.username,
           "ordini.component",
-          "retrievePeso() Call OK"
+          "WEB - retrievePeso() Call OK"
         );
       }
     } catch (e) {
@@ -167,7 +167,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
@@ -181,7 +181,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
@@ -195,7 +195,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePeso() Call KO ${e.message}`
@@ -225,7 +225,7 @@ export function SellerComponent() {
           "INFO",
           currentUser.username,
           "ordini.component",
-          "retrievePezzatura() Call OK"
+          "WEB - retrievePezzatura() Call OK"
         );
       }
     } catch (e) {
@@ -243,7 +243,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
@@ -257,7 +257,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
@@ -271,7 +271,7 @@ export function SellerComponent() {
           "ERROR",
           currentUser.username,
           "ordini.component",
-          `retrieveProduct() Call KO ${e.message}`
+          `WEB - retrieveProduct() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${currentUser.username}, ordini.component, retrievePezzatura() Call KO ${e.message}`
@@ -291,7 +291,7 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelto prodotto ${
+      `WEB - scelto prodotto ${
         event.target.value === 2 ? "Custom" : event.target.value
       }`
     );
@@ -353,7 +353,7 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelto peso busta ${
+      `WEB - scelto peso busta ${
         event.target.value === 2 ? "Custom" : event.target.value
       }`
     );
@@ -383,7 +383,7 @@ export function SellerComponent() {
       "INFO",
       currentUser.username,
       "ordini.component",
-      `scelta pezzatura ${
+      `WEB - scelta pezzatura ${
         event.target.value === 2 ? "Custom" : event.target.value
       }`
     );
@@ -422,7 +422,7 @@ export function SellerComponent() {
               "INFO",
               currentUser.username,
               "ordini.component",
-              `inserito ordine ${prodotto}, quantita: ${qty} peso totale: ${pesoTotale}, pezzatura: ${pezzatura}`
+              `WEB - inserito ordine ${prodotto}, quantita: ${order} peso totale: ${pesoTotale}, pezzatura: ${pezzatura}`
             );
           }
         })
@@ -435,7 +435,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleClick errore ${e.message}`
+              `WEB - handleClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleClick errore ${e.message}`
@@ -448,7 +448,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleClick errore ${e.message}`
+              `WEB - handleClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleClick errore ${e.message}`
@@ -461,7 +461,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleClick errore ${e.message}`
+              `WEB - handleClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleClick errore ${e.message}`
@@ -473,6 +473,12 @@ export function SellerComponent() {
       setSnackColor("orange");
       setResult("L'ordine non può essere vuoto...");
       setOpen(true);
+      Logging.log(
+        "WARN",
+        currentUser.username,
+        "ordini.component",
+        `WEB - Tentato inserimento ordine vuoto`
+      );
     }
   };
 
@@ -510,7 +516,7 @@ export function SellerComponent() {
               "INFO",
               currentUser.username,
               "ordini.component",
-              `inserito ordine personalizzato ${prodottoCustom}, pesoTotale: ${pesoTotaleCustom}`
+              `WEB - inserito ordine personalizzato ${prodottoCustom}, pesoTotale: ${pesoTotaleCustom}`
             );
           }
         })
@@ -523,7 +529,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleCustomClick errore ${e.message}`
+              `WEB - handleCustomClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleCustomClick errore ${e.message}`
@@ -536,7 +542,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleCustomClick errore ${e.message}`
+              `WEB - handleCustomClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleCustomClick errore ${e.message}`
@@ -549,7 +555,7 @@ export function SellerComponent() {
               "ERROR",
               currentUser.username,
               "ordini.component",
-              `handleCustomClick errore ${e.message}`
+              `WEB - handleCustomClick errore ${e.message}`
             );
             console.log(
               `ERROR, ${currentUser.username}, ordini.component, handleCustomClick errore ${e.message}`
@@ -563,6 +569,12 @@ export function SellerComponent() {
         "Devi inserire tutti i campi obbligatori [Nome prodotto, Peso Totale, Quantità]"
       );
       setOpen(true);
+      Logging.log(
+        "WARN",
+        currentUser.username,
+        "ordini.component",
+        `WEB - Tentato inserimento ordine custom vuoto`
+      );
     }
   };
 

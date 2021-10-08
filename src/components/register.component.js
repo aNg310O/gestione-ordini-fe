@@ -121,7 +121,7 @@ export default class Register extends Component {
               Logging.log(
                 "INFO",
                 this.state.username,
-                "login.component",
+                "WEB - login.component",
                 `user logged in`
               );
             }
@@ -133,7 +133,7 @@ export default class Register extends Component {
             "INFO",
             this.state.username,
             "login.component",
-            `utente registrato ${this.state.username}`
+            `WEB - utente registrato ${this.state.username}`
           );
         },
         (error) => {
@@ -156,7 +156,7 @@ export default class Register extends Component {
             "ERROR",
             "NO USER",
             "register.component",
-            `register errore in registrazione ${resMessage}`
+            `WEB - register errore in registrazione ${resMessage}`
           );
         }
       );

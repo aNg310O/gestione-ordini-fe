@@ -4,7 +4,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
 import Logging from "../services/log.service";
-import { Link } from "react-router-dom";
 
 const required = (value) => {
   if (!value) {
@@ -62,7 +61,7 @@ export default class Login extends Component {
             "INFO",
             this.state.username,
             "login.component",
-            `Eseguito login`
+            `WEB - Eseguito login`
           );
           console.log(
             `INFO, ${this.state.username}, login.component, user logged in`
@@ -84,7 +83,7 @@ export default class Login extends Component {
             "ERROR",
             this.state.username,
             "login.component",
-            `login error ${resMessage}`
+            `WEB - login error ${resMessage}`
           );
           console.log(
             `ERROR, ${this.state.username}, login.component, login error ${resMessage}`

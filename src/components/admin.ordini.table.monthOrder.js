@@ -85,7 +85,7 @@ const AdminMonthOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.monthOrder.component",
-          "retrieveMonth() Call OK"
+          "WEB - retrieveMonth() Call OK"
         );
       }
     } catch (e) {
@@ -103,7 +103,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `retrieveMonth() Call KO ${e.message}`
+          `WEB - retrieveMonth() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.monthOrder.component, retrieveMonth() Call KO ${e.message}`
@@ -117,7 +117,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `retrieveMonth() Call KO ${e.message}`
+          `WEB - retrieveMonth() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.monthOrder.component, retrieveMonth() Call KO ${e.message}`
@@ -131,7 +131,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `retrieveMonth() Call KO ${e.message}`
+          `WEB - retrieveMonth() Call KO ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, ordini.table.monthOrder.component, retrieveMonth() Call KO ${e.message}`
@@ -164,7 +164,7 @@ const AdminMonthOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.monthOrder.component",
-          "getData monthyearReport"
+          "WEB - getData monthyearReport"
         );
       } else {
         //setEmpty(true);
@@ -178,7 +178,7 @@ const AdminMonthOrder = () => {
           "INFO",
           seller.username,
           "ordini.table.monthOrder.component",
-          "getData monthyearReport empty"
+          "WEB - getData monthyearReport empty"
         );
       }
     } catch (e) {
@@ -196,7 +196,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.monthOrder.component, getData errore ${e.message}`
@@ -210,7 +210,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.monthOrder.component, getData errore ${e.message}`
@@ -224,7 +224,7 @@ const AdminMonthOrder = () => {
           "ERROR",
           seller.username,
           "ordini.table.monthOrder.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR , ${seller.username}, ordini.table.monthOrder.component, getData errore ${e.message}`
@@ -264,7 +264,7 @@ const AdminMonthOrder = () => {
         "INFO",
         seller.username,
         "ordini.table.monthOrder.component",
-        `handleReportClick download from browser`
+        `WEB - handleReportClick download from browser`
       );
     } else {
       Plugins.Filesystem.writeFile({
@@ -285,7 +285,7 @@ const AdminMonthOrder = () => {
         "INFO",
         seller.username,
         "ordini.table.monthOrder.component",
-        `handleReportClick download from mobile`
+        `WEB - handleReportClick download from mobile`
       );
     }
   };

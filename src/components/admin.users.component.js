@@ -38,7 +38,7 @@ const AdminUsersTable = () => {
             "INFO",
             seller.username,
             "admin.users.component",
-            `get all users`
+            `WEB - get all users`
           );
         }
       }
@@ -57,7 +57,7 @@ const AdminUsersTable = () => {
           "ERROR",
           seller.username,
           "admin.users.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.users.component, getData errore ${e.message}`
@@ -71,7 +71,7 @@ const AdminUsersTable = () => {
           "ERROR",
           seller.username,
           "admin.users.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.users.component, getData errore ${e.message}`
@@ -85,7 +85,7 @@ const AdminUsersTable = () => {
           "ERROR",
           seller.username,
           "admin.users.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.users.component, getData errore ${e.message}`
@@ -116,7 +116,7 @@ const AdminUsersTable = () => {
             "INFO",
             seller.username,
             "admin.users.component",
-            `Eliminazione user ${username}`
+            `WEB - Eliminazione user ${username}`
           );
         });
       }

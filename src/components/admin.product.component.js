@@ -37,7 +37,7 @@ const ProductTable = (props) => {
             "INFO",
             seller.username,
             "admin.product.component",
-            "get di tutti i prodotti"
+            "WEB - get di tutti i prodotti"
           );
         }
       }
@@ -56,7 +56,7 @@ const ProductTable = (props) => {
           "ERROR",
           seller.username,
           "admin.product.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.product.component, getData errore ${e.message}`
@@ -70,7 +70,7 @@ const ProductTable = (props) => {
           "ERROR",
           seller.username,
           "admin.product.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.product.component, getData errore ${e.message}`
@@ -84,7 +84,7 @@ const ProductTable = (props) => {
           "ERROR",
           seller.username,
           "admin.product.component",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
         console.log(
           `ERROR, ${seller.username}, admin.product.component, getData errore ${e.message}`
@@ -108,7 +108,7 @@ const ProductTable = (props) => {
           "INFO",
           seller.username,
           "admin.product.component",
-          `removeData prodotto ${id, prod, pesoTotale, pezzatura}`
+          `WEB - removeData prodotto ${(id, prod, pesoTotale, pezzatura)}`
         );
       });
     }
@@ -131,7 +131,10 @@ const ProductTable = (props) => {
             <td>{pesoTotale}</td>
             <td>{pezzatura}</td>
             <td className="operation">
-              <button className="button" onClick={() => removeData(id, prodotto, pesoTotale, pezzatura)}>
+              <button
+                className="button"
+                onClick={() => removeData(id, prodotto, pesoTotale, pezzatura)}
+              >
                 Elimina
               </button>
             </td>

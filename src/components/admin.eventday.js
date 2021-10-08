@@ -25,6 +25,7 @@ import {
 import Logging from "../services/log.service";
 import Typography from "@material-ui/core/Typography";
 import { CircularIndeterminate } from "./Loader";
+import TextField from "@material-ui/core/TextField";
 
 const { Toast } = Plugins;
 const seller = AuthService.getCurrentUser();
@@ -85,7 +86,7 @@ const AdminEventDay = () => {
           "ERROR",
           seller.username,
           "admin.eventday",
-          `getData errore ${e.message}`
+          `WEB - getLOG errore ${e.message}`
         );
       } else if (e.response.status === 403) {
         setLoading(false);
@@ -99,7 +100,7 @@ const AdminEventDay = () => {
           "ERROR",
           seller.username,
           "admin.eventday",
-          `getData errore ${e.message}`
+          `WEB - getLOG errore ${e.message}`
         );
       } else {
         setLoading(false);
@@ -113,7 +114,7 @@ const AdminEventDay = () => {
           "ERROR",
           seller.username,
           "admin.eventday",
-          `getData errore ${e.message}`
+          `WEB - getData errore ${e.message}`
         );
       }
     }
@@ -171,7 +172,7 @@ const AdminEventDay = () => {
         "INFO",
         seller.username,
         "admin.eventday",
-        `handleReportClick download from browser`
+        `WEB - handleReportClick download from browser`
       );
     } else {
       Plugins.Filesystem.writeFile({
@@ -193,7 +194,7 @@ const AdminEventDay = () => {
         "INFO",
         seller.username,
         "admin.eventday",
-        `handleReportClick download from mobile`
+        `WEB - handleReportClick download from mobile`
       );
     }
   };
@@ -256,18 +257,26 @@ const AdminEventDay = () => {
           Download Event Log
         </Button>
         <br></br>
-        <label>Filtra per data (YYYY-MM-DD):</label>
-        <input
+        <TextField
+          label="Filtra per data(YYYY-MM-DD)"
+          fullWidth
+          style={{ margin: "10px" }}
+          margin="none"
+          onChange={(e) => handleSearch(e)}
           value={filterOne}
           type="text"
-          onChange={(event) => handleSearch(event)}
-        />
-        <label>Filtra per utente:</label>
-        <input
+          variant="outlined"
+        ></TextField>
+        <TextField
+          label="Filtra per utente"
+          fullWidth
+          style={{ margin: "10px" }}
+          margin="none"
+          onChange={(e) => handleSearchUser(e)}
           value={filterTwo}
           type="text"
-          onChange={(event) => handleSearchUser(event)}
-        />
+          variant="outlined"
+        ></TextField>
         {click && (
           <div id="contentday">
             <table id="reportday">
