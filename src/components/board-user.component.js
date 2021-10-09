@@ -1,39 +1,44 @@
 import React, { Component } from "react";
 import UserService from "../services/user.service";
-import { SellerComponent } from './ordini.component'
+import { SellerComponent } from "./ordini.component";
+import { CircularIndeterminate } from "./Loader";
 
 export default class BoardUser extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
+      notload: true,
     };
   }
 
   componentDidMount() {
     UserService.getUserBoard().then(
-      response => {
+      (response) => {
         this.setState({
-          content: response.data
+          content: response.data,
+          notload: false,
         });
       },
-      error => {
+      (error) => {
         this.setState({
           content:
             (error.response &&
               error.response.data &&
               error.response.data.message) ||
             error.message ||
-            error.toString()
+            error.toString(),
         });
       }
     );
   }
 
   render() {
-    return (
-          <SellerComponent />
-    );
+    if (notload) {
+      return <CircularIndeterminate />;
+    } else {
+      return <SellerComponent />;
+    }
   }
 }

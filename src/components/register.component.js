@@ -72,7 +72,7 @@ export default class Register extends Component {
 
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value,
+      username: e.target.value.toLowerCase(),
     });
   }
 

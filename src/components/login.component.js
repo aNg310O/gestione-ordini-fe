@@ -32,7 +32,7 @@ export default class Login extends Component {
 
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value,
+      username: e.target.value.toLowerCase(),
     });
   }
 
